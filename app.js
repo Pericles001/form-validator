@@ -52,7 +52,7 @@ function validatePhone() {
     //(333).444.5555
     //333-444-5555
     //3334445555
-    const re = /^\(?\d{3}\)?[-.]?\d{3}[-.]?\d{4}$/
+    const re = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g
     if (!re.test(phone.value)) {
         phone.classList.add('is-invalid');
         phone.classList.remove('is-valid');
